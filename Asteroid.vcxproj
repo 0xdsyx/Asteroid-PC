@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{7a69bb1d-0ed3-4e8d-ba02-97ead7f0ab68}</ProjectGuid>
+    <RootNamespace>Asteroid</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>
+    </LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)curl\include;$(SolutionDir)openssl\include;$(SolutionDir)Minhook\include;$(ProjectDir)imgui;$(ProjectDir)IL2CPP_Resolver;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)curl\libcurl-x64-debug\lib;$(SolutionDir)openssl\libopenssl-x64-debug\lib;$(SolutionDir)Minhook\libminhook-x64-debug\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Normaliz.lib;crypt32.lib;ws2_32.lib;advapi32.lib;libcrypto.lib;libssl.lib;libMinHook.x64.lib;d3d11.lib;libcurl_a_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)curl\include;$(SolutionDir)openssl\include;$(SolutionDir)Minhook\include;$(ProjectDir)imgui;$(ProjectDir)IL2CPP_Resolver;$(ProjectDir)helpers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)curl\libcurl-x64-release\lib;$(SolutionDir)\openssl\libopenssl-x64-release\lib;$(SolutionDir)\Minhook\libminhook-x64-release\lib;$(SolutionDir)\Asteroid\helpers\vmp;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Normaliz.lib;crypt32.lib;ws2_32.lib;advapi32.lib;libcrypto.lib;libssl.lib;libMinHook.x64.lib;d3d11.lib;libcurl_a.lib;wldap32.lib;VMProtectSDK64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="helpers\utils.cpp" />
+    <ClCompile Include="imgui\imgui.cpp" />
+    <ClCompile Include="imgui\imgui_demo.cpp" />
+    <ClCompile Include="imgui\imgui_draw.cpp" />
+    <ClCompile Include="imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="imgui\imgui_tables.cpp" />
+    <ClCompile Include="imgui\imgui_widgets.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="menu\auth\auth.cpp" />
+    <ClCompile Include="menu\mods\Game\globvars.cpp" />
+    <ClCompile Include="menu\mods\Game\Player.cpp" />
+    <ClCompile Include="menu\mods\Game\WebsocketManager.cpp" />
+    <ClCompile Include="menu\mods\Hooks.cpp" />
+    <ClCompile Include="menu\mods\Pointers.cpp" />
+    <ClCompile Include="menu\ui\config.cpp" />
+    <ClCompile Include="menu\ui\imgui_menu.cpp" />
+    <ClCompile Include="menu\ui\menufeatures.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="helpers\FNPointer.h" />
+    <ClInclude Include="helpers\fslog.hpp" />
+    <ClInclude Include="helpers\json.h" />
+    <ClInclude Include="helpers\obfusheader.h" />
+    <ClInclude Include="helpers\stb_image.h" />
+    <ClInclude Include="helpers\unity\Quaternion.h" />
+    <ClInclude Include="helpers\unity\Unity.h" />
+    <ClInclude Include="helpers\utils.h" />
+    <ClInclude Include="helpers\unity\Vector2.h" />
+    <ClInclude Include="helpers\unity\Vector3.h" />
+    <ClInclude Include="helpers\vmp\VMProtectSDK.h" />
+    <ClInclude Include="IL2CPP_Resolver\API\Callback.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\API\Class.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\API\Domain.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\API\ResolveCall.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\API\String.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\API\Thread.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Data.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Defines.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\IL2CPP_Resolver.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\SystemTypeCache.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Unity\API\Camera.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Unity\API\Component.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Unity\API\GameObject.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Unity\API\LayerMask.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Unity\API\Object.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Unity\API\Rigidbody.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Unity\API\Transform.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Unity\Defines.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Unity\Obfuscators.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Unity\Structures\Engine.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Unity\Structures\il2cpp.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Unity\Structures\il2cppArray.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Unity\Structures\il2cppDictionary.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Unity\Structures\System_String.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Utils\Hash.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Utils\Helper.hpp" />
+    <ClInclude Include="IL2CPP_Resolver\Utils\VTable.hpp" />
+    <ClInclude Include="imgui\imconfig.h" />
+    <ClInclude Include="imgui\imgui.h" />
+    <ClInclude Include="imgui\ImGuiNotify.h" />
+    <ClInclude Include="imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="imgui\imgui_impl_win32.h" />
+    <ClInclude Include="imgui\imgui_internal.h" />
+    <ClInclude Include="imgui\imstb_rectpack.h" />
+    <ClInclude Include="imgui\imstb_textedit.h" />
+    <ClInclude Include="imgui\imstb_truetype.h" />
+    <ClInclude Include="menu\auth\auth.h" />
+    <ClInclude Include="menu\defs.h" />
+    <ClInclude Include="menu\mods\Fields.h" />
+    <ClInclude Include="menu\mods\Game\globvars.h" />
+    <ClInclude Include="menu\mods\Game\Player.h" />
+    <ClInclude Include="menu\mods\Game\WebsocketManager.h" />
+    <ClInclude Include="menu\mods\Hooks.h" />
+    <ClInclude Include="menu\mods\List.h" />
+    <ClInclude Include="menu\mods\Pointers.h" />
+    <ClInclude Include="menu\mods\Structs.h" />
+    <ClInclude Include="menu\ui\Byte.h" />
+    <ClInclude Include="menu\ui\config.h" />
+    <ClInclude Include="menu\ui\fa-solid-900.h" />
+    <ClInclude Include="menu\ui\FontAwesome.h" />
+    <ClInclude Include="menu\ui\imgui_menu.h" />
+    <ClInclude Include="menu\ui\menufeatures.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="helpers\vmp\VMProtectSDK64.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
